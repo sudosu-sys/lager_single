@@ -1,0 +1,105 @@
+.comparison-section {
+  padding: 50px 0;
+  background-color: #f8f9fa;
+}
+
+.comparison-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.comparison-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.card {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.image.before {
+  background-image: url('/img/messy.jpg'); /* Replace with your 'before' image */
+}
+
+.image.after {
+  background-image: url('/img/clean.jpg'); /* Replace with your 'after' image */
+  clip-path: inset(0 0 0 50%);
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 3px;
+  height: 100%;
+  background-color: #170d0d;
+  cursor: ew-resize;
+  position: relative;
+}
+
+.slider::-moz-range-thumb {
+  width: 3px;
+  height: 100%;
+  background-color: #301515;
+  cursor: ew-resize;
+  position: relative;
+}
+
+/* Slider arrows indicator */
+.slider-arrows {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background-color: #444;
+  border-radius: 50%;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+.slider-arrows::before {
+  content: '↔';
+  color: white;
+  font-size: 20px;
+}
